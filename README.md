@@ -18,6 +18,8 @@
 - 编辑菜单消息(Editing menu messages)：第一响应者是由我们自己或者UIKit指定为第一响应者的对象。
 
 > #### 注意
+与加速计、陀螺仪和磁力计相关的运动事件不遵循响应者链，Core Motion会将这些事件直接传递给您指定的对象。有关更多信息，可以参看[Core Motion Framework](https://developer.apple.com/library/content/documentation/Miscellaneous/Conceptual/iPhoneOSTechOverview/CoreServicesLayer/CoreServicesLayer.html#//apple_ref/doc/uid/TP40007898-CH10-SW27)。
+
 
 
 
