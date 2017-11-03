@@ -31,7 +31,7 @@
 
 - (UIView *)z_hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
-    NSLog(@"%@",NSStringFromClass(self.class));
+    NSLog(@"hit ---- %@",NSStringFromClass(self.class));
     
     return [self z_hitTest:point withEvent:event];
 }
