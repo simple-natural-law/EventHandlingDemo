@@ -1,17 +1,16 @@
 //
-//  UIView+extend.m
+//  UIResponder+extend.m
 //  EventHandlingDemo
 //
-//  Created by 讯心科技 on 2017/11/1.
+//  Created by 讯心科技 on 2017/11/3.
 //  Copyright © 2017年 讯心科技. All rights reserved.
 //
 
-#import "UIView+extend.h"
+#import "UIResponder+extend.h"
 #import <objc/runtime.h>
 
-static char *const nameKey = "nameKey";
 
-@implementation UIView (extend)
+@implementation UIResponder (extend)
 
 + (void)swizzleOriginalSelector:(SEL)originalSelector withCurrentSelector:(SEL)currentSelector
 {
@@ -42,7 +41,7 @@ static char *const nameKey = "nameKey";
     
     dispatch_once(&onceToken, ^{
         
-        if (self == [UIView class])
+        if (self == [UIResponder class])
         {
             SEL originalSelector1 = @selector(touchesBegan:withEvent:);
             SEL currentSelector1  = NSSelectorFromString(@"z_touchesBegan:withEvent:");
@@ -62,33 +61,24 @@ static char *const nameKey = "nameKey";
 
 - (void)z_touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touch begin: ------%@",self.name);
+    NSLog(@"touch begin: ------%@",self.class);
     
     [self z_touchesBegan:touches withEvent:event];
 }
 
 - (void)z_touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touch moved: ------%@",self.name);
+    NSLog(@"touch moved: ------%@",self.class);
     
     [self z_touchesMoved:touches withEvent:event];
 }
 
 - (void)z_touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touch ended: ------%@",self.name);
+    NSLog(@"touch ended: ------%@",self.class);
     
     [self z_touchesEnded:touches withEvent:event];
 }
 
-- (NSString *)name
-{
-    return objc_getAssociatedObject(self, nameKey);
-}
-
-- (void)setName:(NSString *)name
-{
-    objc_setAssociatedObject(self, nameKey, name, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 @end
