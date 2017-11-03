@@ -10,8 +10,8 @@
 
 @interface ResponderChainViewController ()
 
-
 @end
+
 
 
 @implementation ResponderChainViewController
