@@ -58,6 +58,9 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 > **重要**：在默认配置下，当多个手指同时触摸视图时，视图也只会接收与事件关联的第一个`UITouch`对象。要接收额外的触摸事件，必须将视图的`multipleTouchEnabled`属性设为`YES`。
 
 
+## Demo
+
+示例代码下载：https://github.com/zhangshijian/EventHandlingDemo.git
 
 
 
