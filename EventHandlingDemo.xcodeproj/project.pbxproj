@@ -13,6 +13,8 @@
 		1A9D68F01FAC555300DDA475 /* ViewCCC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D68EF1FAC555300DDA475 /* ViewCCC.m */; };
 		1A9D68F31FAC557E00DDA475 /* ViewDDD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D68F21FAC557E00DDA475 /* ViewDDD.m */; };
 		1A9D68F61FAC558800DDA475 /* ViewEEE.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D68F51FAC558800DDA475 /* ViewEEE.m */; };
+		1A9D68FA1FB0563A00DDA475 /* IrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D68F91FB0563A00DDA475 /* IrregularView.m */; };
+		1A9D68FD1FB0564B00DDA475 /* IrregularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D68FC1FB0564B00DDA475 /* IrregularViewController.m */; };
 		1A9E47371F8B6B22006314CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E47361F8B6B22006314CC /* AppDelegate.m */; };
 		1A9E473F1F8B6B23006314CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9E473E1F8B6B23006314CC /* Assets.xcassets */; };
 		1A9E47451F8B6B23006314CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E47441F8B6B23006314CC /* main.m */; };
@@ -35,6 +37,10 @@
 		1A9D68F21FAC557E00DDA475 /* ViewDDD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewDDD.m; sourceTree = "<group>"; };
 		1A9D68F41FAC558800DDA475 /* ViewEEE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewEEE.h; sourceTree = "<group>"; };
 		1A9D68F51FAC558800DDA475 /* ViewEEE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewEEE.m; sourceTree = "<group>"; };
+		1A9D68F81FB0563A00DDA475 /* IrregularView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IrregularView.h; sourceTree = "<group>"; };
+		1A9D68F91FB0563A00DDA475 /* IrregularView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IrregularView.m; sourceTree = "<group>"; };
+		1A9D68FB1FB0564B00DDA475 /* IrregularViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IrregularViewController.h; sourceTree = "<group>"; };
+		1A9D68FC1FB0564B00DDA475 /* IrregularViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IrregularViewController.m; sourceTree = "<group>"; };
 		1A9E47321F8B6B21006314CC /* EventHandlingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHandlingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9E47351F8B6B22006314CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A9E47361F8B6B22006314CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A9D68F71FB055F400DDA475 /* 不规则视图点击 */ = {
+			isa = PBXGroup;
+			children = (
+				1A9D68F81FB0563A00DDA475 /* IrregularView.h */,
+				1A9D68F91FB0563A00DDA475 /* IrregularView.m */,
+				1A9D68FB1FB0564B00DDA475 /* IrregularViewController.h */,
+				1A9D68FC1FB0564B00DDA475 /* IrregularViewController.m */,
+			);
+			path = "不规则视图点击";
+			sourceTree = "<group>";
+		};
 		1A9E47291F8B6B20006314CC = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +96,8 @@
 		1A9E47341F8B6B21006314CC /* EventHandlingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1A9E474E1F8B6F2E006314CC /* 触摸事件 */,
+				1A9E474E1F8B6F2E006314CC /* 触摸事件响应链 */,
+				1A9D68F71FB055F400DDA475 /* 不规则视图点击 */,
 				1A9E47351F8B6B22006314CC /* AppDelegate.h */,
 				1A9E47361F8B6B22006314CC /* AppDelegate.m */,
 				1A9E474B1F8B6C32006314CC /* HomeViewController.h */,
@@ -95,7 +113,7 @@
 			path = EventHandlingDemo;
 			sourceTree = "<group>";
 		};
-		1A9E474E1F8B6F2E006314CC /* 触摸事件 */ = {
+		1A9E474E1F8B6F2E006314CC /* 触摸事件响应链 */ = {
 			isa = PBXGroup;
 			children = (
 				1A9D68E81FAC553C00DDA475 /* ViewAAA.h */,
@@ -111,7 +129,7 @@
 				1A9E474F1F8B6F56006314CC /* ResponderChainViewController.h */,
 				1A9E47501F8B6F56006314CC /* ResponderChainViewController.m */,
 			);
-			path = "触摸事件";
+			path = "触摸事件响应链";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9D68FD1FB0564B00DDA475 /* IrregularViewController.m in Sources */,
 				1A9D68F01FAC555300DDA475 /* ViewCCC.m in Sources */,
 				1A9E47451F8B6B23006314CC /* main.m in Sources */,
 				1A9D68F31FAC557E00DDA475 /* ViewDDD.m in Sources */,
@@ -195,6 +214,7 @@
 				1A9D68E71FAC463A00DDA475 /* UIView+extend.m in Sources */,
 				1A9D68ED1FAC554900DDA475 /* ViewBBB.m in Sources */,
 				1A9E474D1F8B6C32006314CC /* HomeViewController.m in Sources */,
+				1A9D68FA1FB0563A00DDA475 /* IrregularView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="610" y="125"/>
         </scene>
-        <!--触摸事件-->
+        <!--触摸事件响应链-->
         <scene sceneID="uwQ-uy-Kzr">
             <objects>
-                <viewController storyboardIdentifier="ResponderChainViewController" title="触摸事件" id="CAp-Af-caF" customClass="ResponderChainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResponderChainViewController" title="触摸事件响应链" id="CAp-Af-caF" customClass="ResponderChainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4gV-Ns-E0x"/>
                         <viewControllerLayoutGuide type="bottom" id="0Yh-oW-8ri"/>
@@ -85,7 +85,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6f-l5-ejh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1493.5999999999999" y="124.58770614692655"/>
+            <point key="canvasLocation" x="1462" y="125"/>
+        </scene>
+        <!--不规则视图点击-->
+        <scene sceneID="8cd-76-TdZ">
+            <objects>
+                <viewController storyboardIdentifier="IrregularViewController" title="不规则视图点击" id="S2h-AC-vKS" customClass="IrregularViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7xG-Oj-ncd"/>
+                        <viewControllerLayoutGuide type="bottom" id="4lX-H8-Dgk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vjD-Om-scg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q39-FP-XSi" customClass="IrregularView">
+                                <rect key="frame" x="54" y="210" width="267" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAN-li-qpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G1r-h4-8bT">

@@ -14,12 +14,15 @@
 
 @end
 
+
+
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArray = @[@{@"title":@"事件响应链",@"target":@"ResponderChainViewController"}];
+    self.dataArray = @[@{@"title":@"触摸事件响应链",@"target":@"ResponderChainViewController"},
+                       @{@"title":@"不规则视图点击",@"target":@"IrregularViewController"}];
 }
 
 
