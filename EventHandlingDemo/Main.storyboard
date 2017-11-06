@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="610" y="125"/>
         </scene>
-        <!--事件响应链-->
+        <!--触摸事件-->
         <scene sceneID="uwQ-uy-Kzr">
             <objects>
-                <viewController storyboardIdentifier="ResponderChainViewController" title="事件响应链" id="CAp-Af-caF" customClass="ResponderChainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResponderChainViewController" title="触摸事件" id="CAp-Af-caF" customClass="ResponderChainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4gV-Ns-E0x"/>
                         <viewControllerLayoutGuide type="bottom" id="0Yh-oW-8ri"/>

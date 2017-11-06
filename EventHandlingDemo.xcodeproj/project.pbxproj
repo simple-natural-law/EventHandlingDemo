@@ -79,7 +79,7 @@
 		1A9E47341F8B6B21006314CC /* EventHandlingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1A9E474E1F8B6F2E006314CC /* 事件响应链 */,
+				1A9E474E1F8B6F2E006314CC /* 触摸事件 */,
 				1A9E47351F8B6B22006314CC /* AppDelegate.h */,
 				1A9E47361F8B6B22006314CC /* AppDelegate.m */,
 				1A9E474B1F8B6C32006314CC /* HomeViewController.h */,
@@ -95,7 +95,7 @@
 			path = EventHandlingDemo;
 			sourceTree = "<group>";
 		};
-		1A9E474E1F8B6F2E006314CC /* 事件响应链 */ = {
+		1A9E474E1F8B6F2E006314CC /* 触摸事件 */ = {
 			isa = PBXGroup;
 			children = (
 				1A9D68E81FAC553C00DDA475 /* ViewAAA.h */,
@@ -111,7 +111,7 @@
 				1A9E474F1F8B6F56006314CC /* ResponderChainViewController.h */,
 				1A9E47501F8B6F56006314CC /* ResponderChainViewController.m */,
 			);
-			path = "事件响应链";
+			path = "触摸事件";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
