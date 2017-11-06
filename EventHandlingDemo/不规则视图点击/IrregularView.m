@@ -27,5 +27,10 @@
     return radius <= 100.0;
 }
 
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"点击了圆形视图");
+}
+
 @end
 
