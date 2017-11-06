@@ -47,7 +47,8 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 
 ### 处理触摸事件
 
-如果我们不打算在自定义视图中使用手势识别器，则可以直接从视图本身处理触摸事件。因为视图属于响应者，所以它们可以处理多点触控事件和许多其他类型的事件。当UIKit确定在某个视图发生触摸事件时，它会调用视图的`touchesBegan:withEvent:`、`touchesMoved:withEvent:`或者`touchesEnded:withEvent:`方法。我们可以重写自定义视图中的这些方法来对触摸事件作出响应。
+响应者对象都是`UIResponder`类的实例，在处理特定类型的事件时，响应者必须覆写相应的方法。为了处理触摸事件，响应者对象需要实现`touchesBegan:withEvent:`、`touchesMoved:withEvent:`或者`touchesEnded:withEvent:`方法。当UIKit确定触摸事件的第一响应者之后，如果这个响应者类实现了`touchesBegan:withEvent:`、`touchesMoved:withEvent:`或者`touchesEnded:withEvent:`方法，那么第一响应者就会去处理触摸事件。如果没有实现，UIKit会沿着默认的响应者链去传递触摸事件。如果响应者链中有响应者实现了前述方法，那么该响应者对象就会去处理传递来的触摸事件。如果没有，那么触摸事件就不会被处理。
+
 
 系统可以随时取消正在进行的触摸序列，当有来电打断应用程序时，UIKit会调用视图的`touchesCancelled:withEvent:`方法去通知视图当前触摸事件已经被系统取消了。我们可以在此方法中根据需要去清理视图的数据。
 
