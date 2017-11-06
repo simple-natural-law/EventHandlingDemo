@@ -12,22 +12,23 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%@ -> touchesBegan",self.class);
+    NSLog(@"touchesBegan -> %@ \n touch view -> %@",self.class, [touches allObjects].lastObject.view.class);
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%@ -> touchesMoved",self.class);
+    NSLog(@"touchesMoved -> %@ \n touch view -> %@",self.class, [touches allObjects].lastObject.view.class);
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%@ -> touchesEnded",self.class);
+    NSLog(@"touchesEnded -> %@ \n touch view -> %@",self.class, [touches allObjects].lastObject.view.class);
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%@ -> touchesCancelled",self.class);
+    NSLog(@"touchesCancelled -> %@ \n touch view -> %@",self.class, [touches allObjects].lastObject.view.class);
 }
+
 
 @end
