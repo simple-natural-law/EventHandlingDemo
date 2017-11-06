@@ -10,12 +10,22 @@
 
 @implementation IrregularView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.layer.cornerRadius  = 100.0;
+    self.layer.masksToBounds = YES;
 }
-*/
+
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+{
+    CGFloat xOffset = point.x - 100;
+    CGFloat yOffset = point.y - 100;
+    CGFloat radius = sqrt(xOffset * xOffset + yOffset * yOffset);
+    return radius <= 100.0;
+}
 
 @end
+

@@ -99,13 +99,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q39-FP-XSi" customClass="IrregularView">
-                                <rect key="frame" x="54" y="210" width="267" height="235"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q39-FP-XSi" customClass="IrregularView">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Um6-TV-0T8"/>
+                                    <constraint firstAttribute="height" constant="200" id="lBd-fc-DmN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q39-FP-XSi" firstAttribute="centerX" secondItem="vjD-Om-scg" secondAttribute="centerX" id="Yks-tk-ZOU"/>
+                            <constraint firstItem="Q39-FP-XSi" firstAttribute="centerY" secondItem="vjD-Om-scg" secondAttribute="centerY" id="hDh-7c-jGT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAN-li-qpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
