@@ -35,7 +35,7 @@
 
 
 
-## 触摸事件
+## 触摸事件(Touch events)
 
 ### 如何确定触摸事件的第一响应者
 
@@ -51,9 +51,11 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的视图，当触
 
 系统可以随时取消正在进行的触摸序列，当有来电打断应用程序时，UIKit会调用视图的`touchesCancelled:withEvent:`方法去通知视图当前触摸事件已经被系统取消了。我们可以在此方法中根据需要去清理视图的数据。
 
-以上用来处理触摸事件的方法对应于触摸事件处理过程的不同阶段。当手指(或Apple Pencil)触摸屏幕时，UIKit会创建一个`UITouch`对象，将触摸点设置为相应的屏幕坐标点，并将其`phase`属性值设为`UITouchPhaseBegan`。
+以上用来处理触摸事件的方法对应于触摸事件处理过程的不同阶段。当手指(或Apple Pencil)触摸屏幕时，UIKit会创建一个`UITouch`对象，将触摸点设置为相应的屏幕坐标点，并将其`phase`属性值设为`UITouchPhaseBegan`。当手指在屏幕上移动时，UIKit会更新触摸位置，并将`UITouch`对象的`phase`属性值改变为`UITouchPhaseMoved`。当用户从屏幕上移开手指时，UIKit会将`phase`属性值改变为`UITouchPhaseEnded`，触摸序列结束。
 
+![图4-1 触摸事件的阶段](https://docs-assets.developer.apple.com/published/7c21d852b9/08b952fe-6f46-41eb-8b8a-4830c1d48842.png)
 
+> **重要**：在默认配置下，当多个手指同时触摸视图时，视图也只会接收与事件关联的第一个`UITouch`对象。要接收额外的触摸事件，必须将视图的`multipleTouchEnabled`属性设为`YES`。
 
 
 
