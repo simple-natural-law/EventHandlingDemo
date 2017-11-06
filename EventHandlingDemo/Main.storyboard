@@ -119,6 +119,31 @@
             </objects>
             <point key="canvasLocation" x="2221.5999999999999" y="124.58770614692655"/>
         </scene>
+        <!--隐藏子视图触摸事件-->
+        <scene sceneID="RCK-rT-YDS">
+            <objects>
+                <viewController storyboardIdentifier="HiddenTouchEventViewController" title="隐藏子视图触摸事件" id="Ygd-y7-W9a" customClass="HiddenTouchEventViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SbN-ko-YbC"/>
+                        <viewControllerLayoutGuide type="bottom" id="gNw-Vy-F0x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w5d-QT-bhm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWW-GH-sf0" customClass="HiddenTouchEventView">
+                                <rect key="frame" x="66" y="208" width="243" height="229"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CP7-Ne-t5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3048.8000000000002" y="122.78860569715144"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="G1r-h4-8bT">
             <objects>
