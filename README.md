@@ -49,12 +49,11 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 
 响应者对象都是`UIResponder`类的实例，在处理特定类型的事件时，响应者必须覆写相应的方法。为了处理触摸事件，响应者对象需要实现`touchesBegan:withEvent:`、`touchesMoved:withEvent:`或者`touchesEnded:withEvent:`方法。当UIKit确定触摸事件的第一响应者之后，如果这个响应者类实现了`touchesBegan:withEvent:`、`touchesMoved:withEvent:`或者`touchesEnded:withEvent:`方法，那么第一响应者就会去处理触摸事件。如果没有实现，UIKit会沿着默认的响应者链去传递触摸事件。如果响应者链中有响应者实现了前述方法，那么该响应者对象就会去处理传递来的触摸事件。如果没有，那么触摸事件就不会被处理。
 
-
-系统可以随时取消正在进行的触摸序列，当有来电打断应用程序时，UIKit会调用视图的`touchesCancelled:withEvent:`方法去通知视图当前触摸事件已经被系统取消了。我们可以在此方法中根据需要去清理视图的数据。
-
-以上用来处理触摸事件的方法对应于触摸事件处理过程的不同阶段。当手指(或Apple Pencil)触摸屏幕时，UIKit会创建一个`UITouch`对象，将触摸点设置为相应的屏幕坐标点，并将其`phase`属性值设为`UITouchPhaseBegan`。当手指在屏幕上移动时，UIKit会更新触摸位置，并将`UITouch`对象的`phase`属性值改变为`UITouchPhaseMoved`。当用户从屏幕上移开手指时，UIKit会将`phase`属性值改变为`UITouchPhaseEnded`，触摸序列结束。
+系统还可以随时取消正在进行的触摸序列，当有来电打断应用程序时，UIKit会调用响应者的`touchesCancelled:withEvent:`方法去通知响应者当前触摸事件已经被系统取消了。
 
 ![图4-1 触摸事件的阶段](https://docs-assets.developer.apple.com/published/7c21d852b9/08b952fe-6f46-41eb-8b8a-4830c1d48842.png)
+
+`touchesBegan:withEvent:`、`touchesMoved:withEvent:`、`touchesEnded:withEvent:`和`touchesCancelled:withEvent:`方法分别对应于触摸事件处理过程的不同阶段。当手指(或Apple Pencil)触摸屏幕时，UIKit会创建一个`UITouch`对象，将触摸点设置为相应的屏幕坐标点，并将其`phase`属性值设为`UITouchPhaseBegan`。当手指在屏幕上移动时，UIKit会更新触摸位置，并将`UITouch`对象的`phase`属性值改变为`UITouchPhaseMoved`。当用户从屏幕上移开手指时，UIKit会将`phase`属性值改变为`UITouchPhaseEnded`，触摸序列结束。当触摸事件被系统取消时，UIKit会将`phase`属性值改变为`UITouchPhaseCancelled`。
 
 > **重要**：在默认配置下，当多个手指同时触摸视图时，视图也只会接收与事件关联的第一个`UITouch`对象。要接收额外的触摸事件，必须将视图的`multipleTouchEnabled`属性设为`YES`。
 
