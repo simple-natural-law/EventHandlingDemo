@@ -10,21 +10,21 @@
 
 @implementation ShakeMotionEventResponder
 
-//#pragma mark- 处理摇晃-运动事件
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
-    {
-        NSLog(@"开始摇晃...");
-    }
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
-    {
-        NSLog(@"摇晃结束...");
-    }
-}
+#pragma mark- 处理摇晃-运动事件
+//- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
+//    {
+//        NSLog(@"开始摇晃...");
+//    }
+//}
+//
+//- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
+//    {
+//        NSLog(@"摇晃结束...");
+//    }
+//}
 
 @end
