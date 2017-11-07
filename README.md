@@ -60,7 +60,9 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 
 ## 摇晃事件
 
-当系统监听到摇晃事件时，也会首先找到摇晃事件的第一响应者，并将该摇晃事件传递给第一响应者去处理，而摇晃事件的第一响应者是由我们自己或者UIKit指定的。覆写响应者对象的`canBecomeFirstResponder`方法并返回`YES`，同时调用其`becomeFirstResponder`方法，该响应者对象就会被指定为第一响应者。要对触摸事件进行处理，响应者对象还需要覆写实现`motionBegan:withEvent:`和`motionEnded:withEvent:`方法。当摇晃事件开始发生时，系统会调用响应者对象的`motionBegan:withEvent:`方法。当摇晃事件结束时，系统会调用响应者对象的`motionEnded:withEvent:`方法。
+当系统监听到摇晃事件时，也会首先找到摇晃事件的第一响应者，并将该摇晃事件传递给第一响应者去处理，而摇晃事件的第一响应者就是由我们自己或者UIKit指定为第一响应者的对象。覆写响应者对象的`canBecomeFirstResponder`方法并返回`YES`，同时调用其`becomeFirstResponder`方法，该响应者对象就会被指定为第一响应者。要对摇晃事件进行处理，响应者对象还需要至少覆写实现`motionBegan:withEvent:`和`motionEnded:withEvent:`方法中的一个。当摇晃事件开始发生时，系统会调用响应者对象的`motionBegan:withEvent:`方法去回应摇晃事件。当摇晃事件结束时，系统会调用响应者对象的`motionEnded:withEvent:`方法回应。
+
+当我们不需要再对摇晃事件进行处理时，需要调用当前响应者对象的`resignFirstResponder`方法注销其第一响应者身份。
 
 ## Demo
 

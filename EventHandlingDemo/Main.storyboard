@@ -142,7 +142,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CP7-Ne-t5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3048.8000000000002" y="122.78860569715144"/>
+            <point key="canvasLocation" x="2982" y="121"/>
+        </scene>
+        <!--运动事件-->
+        <scene sceneID="i31-q4-7zJ">
+            <objects>
+                <viewController storyboardIdentifier="ShakeEventViewController" title="运动事件" id="gga-5d-xzM" customClass="MotionEventViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PAf-hZ-bWZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wle-hR-mhF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FRU-EI-VS6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyC-T5-5rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3826" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G1r-h4-8bT">
