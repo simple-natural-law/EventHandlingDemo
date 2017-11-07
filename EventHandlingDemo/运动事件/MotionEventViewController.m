@@ -18,21 +18,30 @@
 
 @implementation MotionEventViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
     // 指定为第一响应者
-    [self.firstResponder becomeFirstResponder];
+    if ([self.firstResponder becomeFirstResponder])
+    {
+        NSLog(@"指定第一响应者成功...");
+    }
 }
+
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+    [super viewDidDisappear:animated];
+    
     // 注销第一响应者身份
     [self.firstResponder resignFirstResponder];
 }
@@ -45,7 +54,7 @@
 //        NSLog(@"开始摇晃...");
 //    }
 //}
-//
+
 //- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 //{
 //    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
