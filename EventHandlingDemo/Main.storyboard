@@ -147,7 +147,7 @@
         <!--运动事件-->
         <scene sceneID="i31-q4-7zJ">
             <objects>
-                <viewController storyboardIdentifier="ShakeEventViewController" title="运动事件" id="gga-5d-xzM" customClass="MotionEventViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MotionEventViewController" title="运动事件" id="gga-5d-xzM" customClass="MotionEventViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PAf-hZ-bWZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Wle-hR-mhF"/>
