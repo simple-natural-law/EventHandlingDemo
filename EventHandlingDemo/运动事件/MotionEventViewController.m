@@ -7,19 +7,16 @@
 //
 
 #import "MotionEventViewController.h"
+#import "FirstResponder.h"
 
 @interface MotionEventViewController ()
 
+@property (nonatomic, weak) IBOutlet  FirstResponder *firstResponder;
+
 @end
 
+
 @implementation MotionEventViewController
-
-#pragma mark- 允许被指定为第一响应者
-- (BOOL)canBecomeFirstResponder
-{
-    return YES;
-}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,32 +28,31 @@
     [super viewDidAppear:animated];
     
     // 指定为第一响应者
-    [self becomeFirstResponder];
+    [self.firstResponder becomeFirstResponder];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     // 注销第一响应者身份
-    [self resignFirstResponder];
+    [self.firstResponder resignFirstResponder];
 }
 
 #pragma mark- 处理运动事件
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (event.subtype == UIEventSubtypeMotionShake) // 摇晃-运动事件
-    {
-        
-    }
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (event.subtype == UIEventSubtypeMotionShake) // 摇晃-运动事件
-    {
-        
-    }
-}
-
+//- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
+//    {
+//        NSLog(@"开始摇晃...");
+//    }
+//}
+//
+//- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
+//    {
+//        NSLog(@"摇晃结束...");
+//    }
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
