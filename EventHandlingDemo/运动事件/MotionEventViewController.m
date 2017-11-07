@@ -43,12 +43,18 @@
 #pragma mark- 处理运动事件
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    
+    if (event.subtype == UIEventSubtypeMotionShake) // 摇晃-运动事件
+    {
+        
+    }
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    
+    if (event.subtype == UIEventSubtypeMotionShake) // 摇晃-运动事件
+    {
+        
+    }
 }
 
 
