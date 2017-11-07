@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="2982" y="121"/>
         </scene>
-        <!--运动事件-->
+        <!--摇晃-运动事件-->
         <scene sceneID="i31-q4-7zJ">
             <objects>
-                <viewController storyboardIdentifier="MotionEventViewController" title="运动事件" id="gga-5d-xzM" customClass="MotionEventViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MotionEventViewController" title="摇晃-运动事件" id="gga-5d-xzM" customClass="MotionEventViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PAf-hZ-bWZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Wle-hR-mhF"/>

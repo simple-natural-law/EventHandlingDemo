@@ -100,7 +100,7 @@
 			path = "隐藏子视图触摸事件";
 			sourceTree = "<group>";
 		};
-		1A9D69051FB189B700DDA475 /* 运动事件 */ = {
+		1A9D69051FB189B700DDA475 /* 摇晃-运动事件 */ = {
 			isa = PBXGroup;
 			children = (
 				1A9D69061FB189E900DDA475 /* MotionEventViewController.h */,
@@ -108,7 +108,7 @@
 				1A9D690C1FB1BB0C00DDA475 /* FirstResponder.h */,
 				1A9D690D1FB1BB0C00DDA475 /* FirstResponder.m */,
 			);
-			path = "运动事件";
+			path = "摇晃-运动事件";
 			sourceTree = "<group>";
 		};
 		1A9E47291F8B6B20006314CC = {
@@ -133,7 +133,7 @@
 				1A9E474E1F8B6F2E006314CC /* 触摸事件响应链 */,
 				1A9D68F71FB055F400DDA475 /* 不规则视图点击 */,
 				1A9D68FE1FB0626700DDA475 /* 隐藏子视图触摸事件 */,
-				1A9D69051FB189B700DDA475 /* 运动事件 */,
+				1A9D69051FB189B700DDA475 /* 摇晃-运动事件 */,
 				1A9E47351F8B6B22006314CC /* AppDelegate.h */,
 				1A9E47361F8B6B22006314CC /* AppDelegate.m */,
 				1A9E474B1F8B6C32006314CC /* HomeViewController.h */,
