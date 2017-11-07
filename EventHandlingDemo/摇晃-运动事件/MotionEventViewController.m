@@ -7,11 +7,11 @@
 //
 
 #import "MotionEventViewController.h"
-#import "FirstResponder.h"
+#import "ShakeMotionEventResponder.h"
 
 @interface MotionEventViewController ()
 
-@property (nonatomic, weak) IBOutlet  FirstResponder *firstResponder;
+@property (nonatomic, strong)  ShakeMotionEventResponder *firstResponder;
 
 @end
 
@@ -19,34 +19,28 @@
 @implementation MotionEventViewController
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.firstResponder = [[ShakeMotionEventResponder alloc] initWithFrame:self.view.bounds];
+
+    [self.view addSubview:self.firstResponder];
 }
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    // 指定为第一响应者
-    if ([self.firstResponder becomeFirstResponder])
-    {
-        NSLog(@"指定第一响应者成功...");
-    }
 }
 
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    
-    // 注销第一响应者身份
-    [self.firstResponder resignFirstResponder];
 }
 
-#pragma mark- 处理运动事件
+#pragma mark- 处理摇晃-运动事件
 //- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 //{
 //    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
@@ -54,7 +48,7 @@
 //        NSLog(@"开始摇晃...");
 //    }
 //}
-
+//
 //- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 //{
 //    if (motion == UIEventSubtypeMotionShake) // 摇晃-运动事件
