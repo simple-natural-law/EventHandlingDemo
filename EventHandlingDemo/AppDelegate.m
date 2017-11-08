@@ -19,9 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //设置播放会话，在后台可以继续播放（还需要设置程序允许后台运行模式）
+    // 设置播放会话，在后台可以继续播放（还需要设置程序允许后台运行模式）
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     
+    // 激活会话
     if (![[AVAudioSession sharedInstance] setActive:YES error:nil])
     {
         NSLog(@"failed to set up a session.");

@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:@"http://stream.jewishmusicstream.com:8000"]];
+    self.player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:@"http://cdn.instapp.io/nat/samples/audio.mp3"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -65,70 +65,71 @@
         switch (event.subtype)
         {
             case UIEventSubtypeRemoteControlPlay:
-                
+
                 [self.player play];
-                
+
                 self.playOrPauseButton.selected = YES;
-                
+
                 break;
-            
+
             case UIEventSubtypeRemoteControlTogglePlayPause:
-                
+
                 if (self.playOrPauseButton.selected)
                 {
                     [self.player pause];
-                    
+
                     self.playOrPauseButton.selected = NO;
                 }else
                 {
                     [self.player play];
-                    
+
                     self.playOrPauseButton.selected = YES;
                 }
-                
+
                 break;
-            
+
             case UIEventSubtypeRemoteControlNextTrack:
-                
+
                 NSLog(@"NextTrack...");
-                
+
                 break;
-                
+
             case UIEventSubtypeRemoteControlPreviousTrack:
-                
+
                 NSLog(@"PreviousTrack...");
-                
+
                 break;
-                
+
             case UIEventSubtypeRemoteControlBeginSeekingForward:
-                
+
                 NSLog(@"BeginSeekingForward...");
-                
+
                 break;
-                
+
             case UIEventSubtypeRemoteControlEndSeekingForward:
-                
+
                 NSLog(@"EndSeekingForward...");
-                
+
                 break;
-                
+
             case UIEventSubtypeRemoteControlBeginSeekingBackward:
-                
+
                 NSLog(@"BeginSeekingBackward...");
-                
+
                 break;
-                
+
             case UIEventSubtypeRemoteControlEndSeekingBackward:
-                
+
                 NSLog(@"EndSeekingBackward...");
-                
+
                 break;
-                
+
             default:
                 break;
         }
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
