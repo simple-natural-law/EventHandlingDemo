@@ -26,7 +26,7 @@
                        @{@"title":@"不规则视图点击",@"target":@"IrregularViewController"},
                        @{@"title":@"隐藏子视图触摸事件",@"target":@"HiddenTouchEventViewController"},
                        @{@"title":@"摇晃-运动事件",@"target":@"MotionEventViewController"},
-                       @{@"title":@"远程控制事件",@"target":@"RemoteControlEventViewController"}];
+                       @{@"title":@"远程控制事件(需要用真机测试)",@"target":@"RemoteControlEventViewController"}];
 }
 
 

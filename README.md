@@ -60,12 +60,11 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 
 ## 摇晃-运动事件
 
-
 当系统监听到摇晃事件时，会寻找摇晃事件的第一响应者，并将该摇晃事件传递给第一响应者去处理，而摇晃事件的第一响应者是被我们自己(或者UIKit)指定为第一响应者的对象。覆写响应者对象的`canBecomeFirstResponder`方法并返回`YES`，同时调用其`becomeFirstResponder`方法，该响应者对象就会被指定为第一响应者。要对摇晃事件进行处理，响应者对象还需要至少覆写实现`motionBegan:withEvent:`和`motionEnded:withEvent:`方法中的一个。当摇晃事件开始发生时，系统会调用响应者对象的`motionBegan:withEvent:`方法去回应摇晃事件。当摇晃事件结束时，系统会调用响应者对象的`motionEnded:withEvent:`方法回应。如果第一响应者没有处理，那么UIKit会沿着响应者链传递该摇晃事件。
 
 当我们不需要再对摇晃事件进行处理时，需要调用当前响应者对象的`resignFirstResponder`方法注销其第一响应者身份。
 
-**注意：iOS 11(其他系统版本没试)下通过代码实践发现，自定义一个响应者对象，覆写`canBecomeFirstResponder`、`motionBegan:withEvent:`和`motionEnded:withEvent:`方法，在视图控制器的`viewDidAppear:`方法中调用该响应者对象`becomeFirstResponder`方法返回`YES`后，响应者对象还是无法接收到摇晃事件。**
+**注意：本人在iOS 11(11以下系统未试)下通过代码实践发现，按照上述步骤指定第一响应对象后，响应者对象并未接收到摇晃事件。当系统监听到摇晃事件时，UIKit直接将该摇晃事件发送给当前视图控制器，如果当前视图控制器覆写实现了`motionBegan:withEvent:`和`motionEnded:withEvent:`方法，那么当前视图控制器就会去处理该摇晃事件。如果没有，这个事件就不会被应用程序处理。**
 
 
 ## 远程控制事件
