@@ -7,8 +7,14 @@
 //
 
 #import "RemoteControlEventViewController.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 @interface RemoteControlEventViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *playOrPauseButton;
+
+@property (strong, nonatomic) AVPlayer *player;
 
 @end
 
@@ -18,6 +24,110 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:@"http://stream.jewishmusicstream.com:8000"]];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.player pause];
+    
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+}
+
+- (IBAction)playOrPause:(id)sender
+{
+    self.playOrPauseButton.selected = !self.playOrPauseButton.selected;
+    
+    if (self.playOrPauseButton.selected)
+    {
+        [self.player play];
+    }else
+    {
+        [self.player pause];
+    }
+}
+
+#pragma mark- 处理远程控制事件
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    if (event.type == UIEventTypeRemoteControl)
+    {
+        switch (event.subtype)
+        {
+            case UIEventSubtypeRemoteControlPlay:
+                
+                [self.player play];
+                
+                self.playOrPauseButton.selected = YES;
+                
+                break;
+            
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                
+                if (self.playOrPauseButton.selected)
+                {
+                    [self.player pause];
+                    
+                    self.playOrPauseButton.selected = NO;
+                }else
+                {
+                    [self.player play];
+                    
+                    self.playOrPauseButton.selected = YES;
+                }
+                
+                break;
+            
+            case UIEventSubtypeRemoteControlNextTrack:
+                
+                NSLog(@"NextTrack...");
+                
+                break;
+                
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                
+                NSLog(@"PreviousTrack...");
+                
+                break;
+                
+            case UIEventSubtypeRemoteControlBeginSeekingForward:
+                
+                NSLog(@"BeginSeekingForward...");
+                
+                break;
+                
+            case UIEventSubtypeRemoteControlEndSeekingForward:
+                
+                NSLog(@"EndSeekingForward...");
+                
+                break;
+                
+            case UIEventSubtypeRemoteControlBeginSeekingBackward:
+                
+                NSLog(@"BeginSeekingBackward...");
+                
+                break;
+                
+            case UIEventSubtypeRemoteControlEndSeekingBackward:
+                
+                NSLog(@"EndSeekingBackward...");
+                
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

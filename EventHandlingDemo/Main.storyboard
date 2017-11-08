@@ -173,12 +173,33 @@
                     <view key="view" contentMode="scaleToFill" id="xpH-03-Ei5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnU-Ra-oyN">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BZk-d8-x0U"/>
+                                    <constraint firstAttribute="height" constant="100" id="jct-qV-vt4"/>
+                                </constraints>
+                                <state key="normal" image="pause"/>
+                                <state key="selected" image="play"/>
+                                <connections>
+                                    <action selector="playOrPause:" destination="3SA-jb-R37" eventType="touchUpInside" id="I4w-bg-Gmq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DnU-Ra-oyN" firstAttribute="centerY" secondItem="xpH-03-Ei5" secondAttribute="centerY" id="NuP-N4-OoG"/>
+                            <constraint firstItem="DnU-Ra-oyN" firstAttribute="centerX" secondItem="xpH-03-Ei5" secondAttribute="centerX" id="d9V-yT-r5L"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playOrPauseButton" destination="DnU-Ra-oyN" id="93x-th-mpW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6n-eG-UjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4529" y="121"/>
+            <point key="canvasLocation" x="4528.8000000000002" y="120.98950524737631"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G1r-h4-8bT">
@@ -197,4 +218,8 @@
             <point key="canvasLocation" x="-342" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pause" width="32" height="32"/>
+        <image name="play" width="32" height="32"/>
+    </resources>
 </document>
