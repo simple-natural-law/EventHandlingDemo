@@ -69,6 +69,19 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 
 ## 远程控制事件
 
+远程控制事件主要是由耳机线控操作触发的，它和音频播放有关。远程控制事件有以下几种类型：
+
+- `UIEventSubtypeRemoteControlPlay`：播放事件，在暂停状态下，按耳机线控中间按钮一下触发。
+- `UIEventSubtypeRemoteControlPause`：暂停事件，在播放状态下，按耳机线控中间按钮一下触发。
+- `UIEventSubtypeRemoteControlStop`：停止事件
+- `UIEventSubtypeRemoteControlTogglePlayPause`：播放或暂停切换，在播放或暂停状态下，按耳机线控中间按钮一下触发。
+- `UIEventSubtypeRemoteControlNextTrack`：下一曲，按耳机线控中间按钮两下触发。
+- `UIEventSubtypeRemoteControlPreviousTrack`：上一曲，按耳机线控中间按钮三下触发。
+- `UIEventSubtypeRemoteControlBeginSeekingBackward`：快退开始，按耳机线控中间按钮三下不要松开触发。
+- `UIEventSubtypeRemoteControlEndSeekingBackward`：快退停止，按耳机线控中间按钮三下到了快退的位置松开触发。
+- `UIEventSubtypeRemoteControlBeginSeekingForward`：快进开始，按耳机线控中间按钮两下不要松开触发。
+- `UIEventSubtypeRemoteControlEndSeekingForward`：快进停止，按耳机线控中间按钮两下到了快进的位置松开触发。
+
 
 
 ## Demo
