@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="2982" y="121"/>
         </scene>
-        <!--运动事件-->
+        <!--摇晃-运动事件-->
         <scene sceneID="i31-q4-7zJ">
             <objects>
-                <viewController storyboardIdentifier="MotionEventViewController" title="运动事件" id="gga-5d-xzM" customClass="MotionEventViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MotionEventViewController" title="摇晃-运动事件" id="gga-5d-xzM" customClass="MotionEventViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PAf-hZ-bWZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Wle-hR-mhF"/>
@@ -155,18 +155,8 @@
                     <view key="view" contentMode="scaleToFill" id="FRU-EI-VS6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-yv-rKf" customClass="FirstResponder">
-                                <rect key="frame" x="67" y="187" width="240" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="firstResponder" destination="1bp-yv-rKf" id="x9X-Dk-d4M"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyC-T5-5rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

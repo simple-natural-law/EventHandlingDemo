@@ -1,5 +1,5 @@
 //
-//  FirstResponder.h
+//  ShakeMotionEventResponder.h
 //  EventHandlingDemo
 //
 //  Created by 讯心科技 on 2017/11/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstResponder : UIView
+@interface ShakeMotionEventResponder : UIView
 
 @end

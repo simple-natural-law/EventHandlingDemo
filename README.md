@@ -58,11 +58,11 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 > **重要**：在默认配置下，当多个手指同时触摸视图时，视图也只会接收与事件关联的第一个`UITouch`对象。要接收额外的触摸事件，必须将视图的`multipleTouchEnabled`属性设为`YES`。
 
 
-## 运动事件
+## 摇晃-运动事件
 
-当系统监听到运动事件时，会寻找运动事件的第一响应者，并将该运动事件传递给第一响应者去处理，而运动事件的第一响应者就是由我们自己或者UIKit指定为第一响应者的对象。覆写响应者对象的`canBecomeFirstResponder`方法并返回`YES`，同时调用其`becomeFirstResponder`方法，该响应者对象就会被指定为第一响应者。要对运动事件进行处理，响应者对象还需要至少覆写实现`motionBegan:withEvent:`和`motionEnded:withEvent:`方法中的一个。当运动事件开始发生时，系统会调用响应者对象的`motionBegan:withEvent:`方法去回应运动事件。当运动事件结束时，系统会调用响应者对象的`motionEnded:withEvent:`方法回应。
+当系统监听到摇晃事件时，会寻找摇晃事件的第一响应者，并将该摇晃事件传递给第一响应者去处理，而摇晃事件的第一响应者是被我们自己(或者UIKit)指定为第一响应者的对象。覆写响应者对象的`canBecomeFirstResponder`方法并返回`YES`，同时调用其`becomeFirstResponder`方法，该响应者对象就会被指定为第一响应者。要对摇晃事件进行处理，响应者对象还需要至少覆写实现`motionBegan:withEvent:`和`motionEnded:withEvent:`方法中的一个。当摇晃事件开始发生时，系统会调用响应者对象的`motionBegan:withEvent:`方法去回应摇晃事件。当摇晃事件结束时，系统会调用响应者对象的`motionEnded:withEvent:`方法回应。
 
-当我们不需要再对运动事件进行处理时，需要调用当前响应者对象的`resignFirstResponder`方法注销其第一响应者身份。
+当我们不需要再对摇晃事件进行处理时，需要调用当前响应者对象的`resignFirstResponder`方法注销其第一响应者身份。
 
 ## Demo
 
