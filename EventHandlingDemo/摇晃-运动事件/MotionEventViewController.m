@@ -11,6 +11,7 @@
 
 @interface MotionEventViewController ()
 
+
 @end
 
 
@@ -26,20 +27,12 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
-    
-    [self becomeFirstResponder];
 }
 
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    
-    [UIApplication sharedApplication].applicationSupportsShakeToEdit = NO;
-    
-    [self resignFirstResponder];
 }
 
 #pragma mark- 处理摇晃-运动事件

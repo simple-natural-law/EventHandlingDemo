@@ -18,13 +18,13 @@
     dispatch_once(&onceToken, ^{
         
         SEL originalSelector = @selector(hitTest:withEvent:);
-        
+
         SEL currentSelector = NSSelectorFromString(@"z_hitTest:withEvent:");
-        
+
         Method original = class_getInstanceMethod([self class], originalSelector);
-        
+
         Method current  = class_getInstanceMethod([self class], currentSelector);
-        
+
         method_exchangeImplementations(original, current);
     });
 }

@@ -82,6 +82,7 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 - `UIEventSubtypeRemoteControlBeginSeekingForward`：快进开始，按耳机线控中间按钮两下不要松开触发。
 - `UIEventSubtypeRemoteControlEndSeekingForward`：快进停止，按耳机线控中间按钮两下到了快进的位置松开触发。
 
+接收远程控制事件首先需要在应用程序启动完成后调用应用程序中唯一的`UIApplication`对象的`beginReceivingRemoteControlEvents`方法启用远程控制事件接收。要对远程控制事件进行处理，需要响应者对象覆写实现`remoteControlReceivedWithEvent:`方法，如果这个响应者对象不是`UIApplication`类或者`UIViewController`类的实例，还需要指定该响应者对象为第一响应者。要停止接收远程控制事件，需要调用应用程序中唯一的`UIApplication`对象的`endReceivingRemoteControlEvents`方法。
 
 
 ## Demo
