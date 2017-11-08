@@ -19,6 +19,7 @@
 @implementation HomeViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.dataArray = @[@{@"title":@"触摸事件响应链",@"target":@"ResponderChainViewController"},
