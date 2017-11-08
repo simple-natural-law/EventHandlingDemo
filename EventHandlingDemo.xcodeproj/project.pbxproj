@@ -18,7 +18,7 @@
 		1A9D69011FB0628400DDA475 /* HiddenTouchEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D69001FB0628400DDA475 /* HiddenTouchEventViewController.m */; };
 		1A9D69041FB0635200DDA475 /* HiddenTouchEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D69031FB0635200DDA475 /* HiddenTouchEventView.m */; };
 		1A9D69081FB189E900DDA475 /* MotionEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D69071FB189E900DDA475 /* MotionEventViewController.m */; };
-		1A9D690E1FB1BB0C00DDA475 /* ShakeMotionEventResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D690D1FB1BB0C00DDA475 /* ShakeMotionEventResponder.m */; };
+		1A9D69141FB2A53E00DDA475 /* UIResponder+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D69131FB2A53E00DDA475 /* UIResponder+FirstResponder.m */; };
 		1A9E47371F8B6B22006314CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E47361F8B6B22006314CC /* AppDelegate.m */; };
 		1A9E473F1F8B6B23006314CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9E473E1F8B6B23006314CC /* Assets.xcassets */; };
 		1A9E47451F8B6B23006314CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E47441F8B6B23006314CC /* main.m */; };
@@ -51,8 +51,8 @@
 		1A9D69031FB0635200DDA475 /* HiddenTouchEventView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiddenTouchEventView.m; sourceTree = "<group>"; };
 		1A9D69061FB189E900DDA475 /* MotionEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionEventViewController.h; sourceTree = "<group>"; };
 		1A9D69071FB189E900DDA475 /* MotionEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionEventViewController.m; sourceTree = "<group>"; };
-		1A9D690C1FB1BB0C00DDA475 /* ShakeMotionEventResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShakeMotionEventResponder.h; sourceTree = "<group>"; };
-		1A9D690D1FB1BB0C00DDA475 /* ShakeMotionEventResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeMotionEventResponder.m; sourceTree = "<group>"; };
+		1A9D69121FB2A53E00DDA475 /* UIResponder+FirstResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+FirstResponder.h"; sourceTree = "<group>"; };
+		1A9D69131FB2A53E00DDA475 /* UIResponder+FirstResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+FirstResponder.m"; sourceTree = "<group>"; };
 		1A9E47321F8B6B21006314CC /* EventHandlingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHandlingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9E47351F8B6B22006314CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A9E47361F8B6B22006314CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,8 +105,6 @@
 			children = (
 				1A9D69061FB189E900DDA475 /* MotionEventViewController.h */,
 				1A9D69071FB189E900DDA475 /* MotionEventViewController.m */,
-				1A9D690C1FB1BB0C00DDA475 /* ShakeMotionEventResponder.h */,
-				1A9D690D1FB1BB0C00DDA475 /* ShakeMotionEventResponder.m */,
 			);
 			path = "摇晃-运动事件";
 			sourceTree = "<group>";
@@ -140,6 +138,8 @@
 				1A9E474C1F8B6C32006314CC /* HomeViewController.m */,
 				1A9D68E51FAC463A00DDA475 /* UIView+extend.h */,
 				1A9D68E61FAC463A00DDA475 /* UIView+extend.m */,
+				1A9D69121FB2A53E00DDA475 /* UIResponder+FirstResponder.h */,
+				1A9D69131FB2A53E00DDA475 /* UIResponder+FirstResponder.m */,
 				1A9E473E1F8B6B23006314CC /* Assets.xcassets */,
 				1A9E47431F8B6B23006314CC /* Info.plist */,
 				1A9E47441F8B6B23006314CC /* main.m */,
@@ -240,12 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9D68FD1FB0564B00DDA475 /* IrregularViewController.m in Sources */,
-				1A9D690E1FB1BB0C00DDA475 /* ShakeMotionEventResponder.m in Sources */,
 				1A9D69081FB189E900DDA475 /* MotionEventViewController.m in Sources */,
 				1A9D68F01FAC555300DDA475 /* ViewCCC.m in Sources */,
 				1A9D69011FB0628400DDA475 /* HiddenTouchEventViewController.m in Sources */,
 				1A9D69041FB0635200DDA475 /* HiddenTouchEventView.m in Sources */,
 				1A9E47451F8B6B23006314CC /* main.m in Sources */,
+				1A9D69141FB2A53E00DDA475 /* UIResponder+FirstResponder.m in Sources */,
 				1A9D68F31FAC557E00DDA475 /* ViewDDD.m in Sources */,
 				1A9E47511F8B6F56006314CC /* ResponderChainViewController.m in Sources */,
 				1A9D68F61FAC558800DDA475 /* ViewEEE.m in Sources */,

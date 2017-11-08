@@ -7,11 +7,9 @@
 //
 
 #import "MotionEventViewController.h"
-#import "ShakeMotionEventResponder.h"
+
 
 @interface MotionEventViewController ()
-
-@property (nonatomic, strong)  ShakeMotionEventResponder *firstResponder;
 
 @end
 
@@ -22,22 +20,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    self.firstResponder = [[ShakeMotionEventResponder alloc] initWithFrame:self.view.bounds];
-
-    [self.view addSubview:self.firstResponder];
 }
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
+    
+    [self becomeFirstResponder];
 }
 
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
+    
+    [self resignFirstResponder];
 }
 
 #pragma mark- 处理摇晃-运动事件
