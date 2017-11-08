@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -161,6 +161,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyC-T5-5rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3824.8000000000002" y="120.98950524737631"/>
+        </scene>
+        <!--远程控制事件-->
+        <scene sceneID="tcS-dG-zPu">
+            <objects>
+                <viewController storyboardIdentifier="RemoteControlEventViewController" title="远程控制事件" id="3SA-jb-R37" customClass="RemoteControlEventViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wt7-xa-ZVk"/>
+                        <viewControllerLayoutGuide type="bottom" id="qvy-mL-t7G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xpH-03-Ei5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6n-eG-UjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4529" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G1r-h4-8bT">

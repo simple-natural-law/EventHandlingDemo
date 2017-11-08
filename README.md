@@ -64,7 +64,7 @@ UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图
 
 当我们不需要再对摇晃事件进行处理时，需要调用当前响应者对象的`resignFirstResponder`方法注销其第一响应者身份。
 
-**注意：本人通过代码实践发现，iOS 11下自定义一个响应者对象，覆写`canBecomeFirstResponder`、`motionBegan:withEvent:`和`motionEnded:withEvent:`方法，在视图控制器的`viewDidAppear:`方法中调用该响应者对象`becomeFirstResponder`方法返回`YES`后，响应者对象无法接收到摇晃事件。**
+**注意：iOS 11(其他系统版本没试)下通过代码实践发现，自定义一个响应者对象，覆写`canBecomeFirstResponder`、`motionBegan:withEvent:`和`motionEnded:withEvent:`方法，在视图控制器的`viewDidAppear:`方法中调用该响应者对象`becomeFirstResponder`方法返回`YES`后，响应者对象无法接收到摇晃事件。**
 
 
 ## 远程控制事件

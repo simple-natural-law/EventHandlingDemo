@@ -25,7 +25,8 @@
     self.dataArray = @[@{@"title":@"触摸事件响应链",@"target":@"ResponderChainViewController"},
                        @{@"title":@"不规则视图点击",@"target":@"IrregularViewController"},
                        @{@"title":@"隐藏子视图触摸事件",@"target":@"HiddenTouchEventViewController"},
-                       @{@"title":@"摇晃-运动事件",@"target":@"MotionEventViewController"}];
+                       @{@"title":@"摇晃-运动事件",@"target":@"MotionEventViewController"},
+                       @{@"title":@"远程控制事件",@"target":@"RemoteControlEventViewController"}];
 }
 
 

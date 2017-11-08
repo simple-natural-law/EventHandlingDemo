@@ -37,6 +37,8 @@
 {
     [super viewDidDisappear:animated];
     
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = NO;
+    
     [self resignFirstResponder];
 }
 
