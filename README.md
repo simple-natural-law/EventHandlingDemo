@@ -45,7 +45,7 @@
 
 UIKit会将每个触摸事件永久指定给包含触摸位置的最上层视图，当触摸开始时，UIKit会为每个触摸事件创建一个`UITouch`对象，直到触摸结束之后才会释放`UITouch`对象。随着触摸位置或其他参数的改变，UIKit会使用新信息更新`UITouch`对象，唯一不变的属性是触摸事件所属的`view`。即使触摸位置移动到触摸事件所属的原始视图之外，触摸事件所属视图也不会改变。
 
-### 处理触摸事件
+### 回应触摸事件
 
 响应者对象都是`UIResponder`类的实例，在处理特定类型的事件时，系统会调用响应者对象相应的方法去回应事件，响应者必须覆写实现相应的方法。为了处理触摸事件，响应者对象需要实现`touchesBegan:withEvent:`、`touchesMoved:withEvent:`和`touchesEnded:withEvent:`方法中的一个或者多个。UIKit确定触摸事件的第一响应者之后，如果这个响应者类覆写实现了`touchesBegan:withEvent:`、`touchesMoved:withEvent:`和`touchesEnded:withEvent:`方法中的一个或者多个，那么当触摸开始发生时，系统会调用响应者对象的`touchesBegan:withEvent:`方法去回应触摸事件。当触摸位置移动时，会调用响应者对象的`touchesMoved:withEvent:`方法去回应，当触摸结束时，会调用`touchesEnded:withEvent:`方法去回应。如果这几个方法一个都没有被实现，那么UIKit会沿着默认的响应者链去传递触摸事件。如果响应者链中有响应者实现了前述方法，那么该响应者对象就会去处理传递来的触摸事件。否则，该触摸事件就不会被处理。
 
